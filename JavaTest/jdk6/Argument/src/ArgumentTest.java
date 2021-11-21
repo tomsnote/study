@@ -1,5 +1,3 @@
-package com.test.argument;
-
 import org.junit.Test;
 
 class ArgumentTest {

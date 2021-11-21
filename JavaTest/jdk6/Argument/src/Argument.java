@@ -1,11 +1,9 @@
-package com.test.argument;
-
 public class Argument {
 
 	int size = 10000;
 
 	public static void main(String[] args) throws Exception {
-		// 로드한 상태에서
+		// 로드만 한 상태에서
 		Argument test = new Argument();
 		test.test1();
 //		test.test2();

@@ -6,7 +6,7 @@ public class BeepPrintExample2 {
 		Thread thread = new Thread(beepTask);
 		thread.start();
 		for (int i = 0; i < 5; i++) {
-			System.out.println("¶ò");
+			System.out.println(i);
 			try {
 				Thread.sleep(500);
 			} catch (Exception e) {
@@ -14,8 +14,7 @@ public class BeepPrintExample2 {
 		}
 
 	}
-	// runnable ÀÍ¸í °´Ã¼ »ç¿ë¹ý
-	// runnable ±¸Çö Å¬·¡½º¸¦ ³»ºÎ¿¡ ÀÛ¼ºÇÑ´Ù.
+	// runnable ìµëª… ê°ì²´ ì´ìš©
 	/* 
 	 * Thread thread = new Thread(new Runnable(){
 	 * @Override
@@ -29,8 +28,7 @@ public class BeepPrintExample2 {
 	 * });
 	 *  */
 
-	// runnable ÀÍ¸í °´Ã¼ »ç¿ë¹ý
-	// ¶÷´Ù½Ä ÀÌ¿ë
+	// runnable ëžŒë‹¤ì‹ ì´ìš©
 	/* 
 	 * Thread thread = new Thread(()->{
 	 * @Override
