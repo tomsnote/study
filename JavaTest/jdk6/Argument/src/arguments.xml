@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arguments>
+	<option name="silent" class="com.innorules.installation.Silent">
+		<argument name="-s" />
+		<argument name="--silent" />
+		<message>Automatic Installation.</message>
+	</option>
+	<option name="gui" class="com.innorules.installation.Gui">
+		<argument name="-g" />
+		<argument name="--gui" />
+		<message>GUI Installation.</message>
+	</option>
+	<option name="config">
+		<argument name="-c" default="config.xml" />
+		<argument name="--config" desc="=[FILE]" />
+		<message>with --silent; Read the designated file for silent in XML. Ex) "--config=silent.xml".</message>
+	</option>
+	<option name="file">
+		<argument name="-f" default="config.zip" />
+		<argument name="--file" desc="=[FILE]" />
+		<message>with --silent; Read the designated file for silent in Zip. Ex) "--file=silent.zip".</message>
+	</option>
+	<option name="help">
+		<argument name="-h" />
+		<argument name="--help" />
+		<message>Options Display</message>
+	</option>
+</arguments>
