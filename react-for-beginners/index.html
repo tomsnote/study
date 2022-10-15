@@ -4,26 +4,41 @@
     <div id="root"></div>
 </body>
     <!-- react engine : interactive UI-->
-    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <!-- <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script> -->
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
     <!-- role, react element in HTML -->
-    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <!-- <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script> -->
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
     <!-- Using JSX, display like HTML in react -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-        const root = document.getElementById("root");
-        // const h3 = React.createElement( "h3", {id:"title", style:{color: "red"}, onMouseEnter: () => console.log("mouse enter")}, "Hello I'm a span.");
-        // const btn = React.createElement("button", {onClick:() => console.log("I'm clicked"), style:{backgroundColor:"tomato"}}, "Clicked me");
-        const Button = () => (<button style={{backgroundColor:"tomato"}}onClick={()=>console.log("I'm clicked")}>Clicked me</button>);
-        // const container = React.createElement("div", null, [Title, Button]);
+        function Btn({text, fontSize = 12}){
+            return <button 
+                style={{
+                backgroundColor:"tomato",
+                color:"white",
+                padding:"10px 20px",
+                border: 0,
+                borderRadius:10,
+                fontSize,
+            }}>
+                {text}
+            </button>;
+        }
+        Btn.propTypes = {
+            text: PropTypes.string.isRequired,
+            fontSize: PropTypes.number,
+        }
         function App() { 
-            const [counter, setCounter] = React.useState(0);
             return (
-            <div>
-                <h3>Total clicks: {counter}</h3>
-                <button onClick={() => setCounter((current) => current+1)}>Click me</button>
-            </div>
+                <div>
+                    <Btn text="Save Changes" fontSize={18} />
+                    <Btn text={"Continue"}  />
+                </div>
             );
         }
+        const root = document.getElementById("root");
         ReactDOM.render(<App/>, root);
     </script>
 </html>
